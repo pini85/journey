@@ -1,0 +1,311 @@
+<h1>Computer Science 101</h1>
+<ul>
+  <h3>Binary System</h3>
+  <li>We use binary because electricity can only be on and off(1 and 0) and the combination of on and off gives
+    the circuit different states and thus gives the computer hardhare different options.</li>
+  <li>The Binary number system has a base of 2</li>
+    <p>0^2(1), 1^2(2), 2^2(4) 3^2(8) etc <br>
+    Not like our deca system that it is 0^10(1), 1^10(10), 2^10(20) etc</p>
+  <li>Bit comes from the words <strong>B</strong>inary Dig<strong>it</strong> </li>
+  <li>Byte comes from the word Eight.</li>
+
+
+  <h3>Mathamatics</h3>
+  <li> In computer science we use logarithmic functions(log functions). They are the inverse
+    of exponential functions(n^2). It is great for algorithims because it grows at the start rapidly and then gradually grows less and less over time.<br>
+    Lets say I have time algorthim that runs by seconds. The N represents the data and the output would be the seconds.<br>n = 64<br>
+    log^2(n)=?<br>
+    The answer is 6 seconds. 2^64 = 6 The more data you will have the more seconds will increase but only in a very slow rate.
+  </li>
+  <li>A few ways to calculate data.<br>
+    1)n <br>
+    2)n^2 <br>
+    3)nlog(n) <br>
+  </li>
+  <li>
+    For example if N was 1000 and for every cycle of
+    a program it takes .01 seconds so: <br>
+    n = 1000 * .01s <br>
+    nlog(n) = 1000log(1000) = 9965.7842847 * .01s <br>
+    n^2 = 1,000^2 = 1,000,000 * .01s <br>
+  </li>
+  <h3>Notations</h3>
+  <li>o(n) == Faster</li>
+  <li>O(n) == Faster or equal (at worst)</li>
+  <li>O(n) with a mark inside == Equal to</li>
+  <li>Omega(n) == Slower or equal to (at best)</li>
+  <li>w(n) == Slower than <br>
+    <i>The most important notation above is the Omicron, or "Big O". The reason for this is because it gives us a worse case scenario. That means we know the absolute worse case scenario of our program, meaning if we plan for this, we won't have any surprises or weird corner cases that come up.<br>
+    We can then compare the worst case scenarios of programs to see which are faster. Since this is the absolute slowest the program can run, we know that one program will always run slower than another program!</i>
+  </li>
+  <h3>Memory</h3>
+  <li>Data is stored for example on a hard drive which is sectioned in different little parts and those parts are sectioned in even more parts and inside of them are clusters. And each cluster has an address. </li>
+  <h4>Arrays in memory</h4>
+  <li>Array gathers all the data you want in this one piece of memory and insert it in a one name main
+    address. And each element gets a mini name which is our index. Instead of each element to get a seperate address thus allocating a piece of memory to that every data, all elements have one address and allocated one piece of memory. This creates a fast-organized data structure.</li><br>
+    Time it takes to do operations with <strong>fixed arrays</strong>:<br>
+    <i>Fixed arrays are the most basic version of an array. They are created with a fixed size and stick to this size throughout their execution.</i>
+  <li>
+    Insertion(randomly): O( 1 ) meaning constant time <br>
+    <i>To insert a element randomly to an array will be instantanous. It will not take any time. </i>
+  </li>
+  <li>Insertion-Front: O(n) <br>
+    <i>To insert a element on the front, you need to shift all elements to the right. Which all elements represents n.</i><li>
+  <li>Insert-Back: O( 1 )<br>
+    <i>You do not need to shift any elements. It will be instantanous.</i></li>
+  <li>Delete(randomly): O( 1 )<br>
+    <i>You do not need to move anything. It will instantanous.(If you dont shift all elements in the index)</i></li>
+  <li>But Delete(front): O(n) <br>
+    <i>Because you need to shifts all elements in the index</i></li>
+  <li>Search(unsorted): O(n)<br>
+    <i>You dont know where the element is.You need check every single element to search. So worst case you are searching all n.</i></li>
+  <li>Search(sorted): O(logn) <br>
+    <i>If the array is sorted, we can keep cutting the array in half to find the element we are searching for. This means it will take at most logn operations to find our element. (Reverse exponential) Do not need to go through all the elements.</i></li>
+    <h4>Circular arrays</h4>
+  <li>For inserting to the front or back they are O( 1 ) because you do not need to shift
+    any elements it happens instantously becuase it is a circle not a straight line.</li><br>
+    <i>In ruby they are called ringbuffers or circular queues.<br>
+    However,it can't be implemented as purely as in C, since C allows you to control pointers, and therefore build the circular array from scratch. <br>
+    Example is here: https://gist.github.com/eerohele/1904422 </i>
+  <h4>Dynamic Arrays</h4>
+  <li>At some point the array will be full and cannot insert any more data to it. We would need to
+    create a new array with an extra space and transfer all the data from the old array to the new. We would need to touch every single data in the old array so it makes it O(n) times to do that operation.</li>
+  <li>Dynamic Arrays allow to increase the size doing O( 1 ) times to do the operation. Everytime the
+    array is full, it creates a new array and doubles the size of that array. Once you double the size you need to transfer all the data to the new array thus becoming O(n) but the next empty spaces will become O( 1 ). In the long term it will average out to become O( 1 ).</li>
+  <li>I asked if ruby arrays are automatically classified as dynamic arrays. Here is the response:</li>
+    <i>
+    Hello, yes in Ruby the arrays automatically adjust the size for the array. It adjusts the size differently depending on the operation however. If you take two arrays and use the + function on them. then it will create a third array and splice in the data to that. However if you use a concat function, it just splices the data from the second into the first. Depending on the operation, it will do different things.
+    Memorywise, I'm not sure. I am assuming it creates array slightly bigger than what it needs and then adjusts accordingly. So if you were doing the program in say C vs Ruby, you would probably have better memory conservation. However I don't think the difference is that much.
+
+    Now, since Ruby is very developed. All of these operations will be as efficient as they can be!
+
+    </i>
+  <h4>Nodes</h4>
+  <li>A node is allocational object. It is an object that allocats other objects.</li>
+  <li>A node has two sections. One is an address to allocate data from memory (pointer). The other is it can
+    link to
+    other nodes. It can go "Next" and we can link it to any other  node we want and have a "previous" as well.
+  </li>
+  <li>A significant difference between an array and a node is that an array is in a linear sequence. One
+    after the other. In nodes you can allocate memory from all different parts of it.</li>
+  <li>When chaining nodes together you create <strong>Linked Lists</strong></li>
+  <li><i> The advatnage of creating nodes is that you can create as much data as you want without needing to
+    double it like you do in an array. It allows you to add as you please and not need to think of the organization of it all, like we do in an array.</li>
+  <li>This a <a href="http://wlowry88.github.io/blog/2014/08/20/linked-lists-in-ruby/">link </a> how to
+    implement Nodes and Linked Lists in Ruby. Please note the pros and cons for doing so.</a> </li>
+  <li> Also arrays are locked in a box, nodes are free. Which will help you in the long run.</li>
+  <li>You can chain many nodes into one node. Creating a tree</li> <br></i>
+  <li>For example everything in a html document is a fixed pre-defined linked nodes.</li>
+    <i>The entire document is a document node. <strong>Document</strong><br>
+    Every HTML element is an element node. <strong>Root element: <"html"> and elements: <"head">, <"title"> <"body">, <"h1"> etc </strong><br>
+    The text inside HTML elements are text nodes. <strong></strong><br>
+    Every HTML attribute is an attribute node (deprecated). <strong><"href"></strong><br>
+    All comments are comment nodes. <strong></strong></i>
+  <li>The nodes in the node tree have a hierarchical relationship to each other.</li>
+    The terms parent, child, and sibling are used to describe the relationships.<br>
+    <i>In a node tree, the top node is called the root (or root node).<br>
+    Every node has exactly one parent, except the root (which has no parent).<br>
+    A node can have a number of children.<br>
+    Siblings (brothers or sisters) are nodes with the same parent.
+  <h4>Run time with Nodes Linked Lists:</h4>
+  <li>Insert(Rand): O(n)</li>
+    <i>You can only start from the beginning and needs to go through all the nodes and worst case scenerio you could put the rnadom insertation all the way in the back</i>
+  <li>Insert(Front): O( 1 )</li>
+    <i>If you want to insert a new node in the front. Whatever our pointer is (start), just put that pointer to the new node and link the new node to the previous start node. It takes 3 step operations not all of the data elements.</i>
+  <li> Insert(Back): O(n)</li>
+    <i>There is no way to go the back without going to the entire list.</i>
+  <li>Delete(Random)</li>
+    <i>You can't go in the middle of the list and delete something like in an array, you need to go through all the nodes and worst case scenerio if you delete the last one you need to go through all the data.</i>
+  <li>Delete(Front): O( 1 )</li>
+    <i>Start = Start.next. So you disconnect the first node and then delete it.</i>
+  <li>Search(sorted): O(n)</li>
+    <i>You need to start from the start you go to your node so worst case scenrio it can be in the end. There is no way you can go straight to the middle like an array so it doesnt matter if it is sorted or not. </i>
+  <li>Search(unsorted): O(n)</li>
+    <i>You need to start from the beginning</i>
+  <h3>Doubly linked lists</h3>
+  <li>A link to each node with next and also previous</li>
+  <li>This helps for example if you want to find a specific node and delete it. It will take 2 n's to
+    do so. First you search the specific node. Then to delete it you need to go back to the previous node because you need to link that to the next node after the one that will be deleted.(next.next) other wise all your data after that node will be not accessible. <br></li>
+    But if you have a pointer pointing back you dont need to do the operation 2 times.
+  <li>Or for if you wanted to print everything backwards you need to go through all the nodes each time
+    for every node. That will be a 0(n2)</li>
+  <h3>Tail pointers</h3>
+  <li>By default we have a head pointer(start)It basically makes a pointer to the end. So now if you
+    want to do operations for the last node, like delete or insert or search it will become O ( 1 ) </li>
+  <li>So now if we want to print everything from the last node backwards and you also have a doubly
+    linked list it will become now a O(n) </li>
+  <h3>Examples of linked lists in the real world</h3>
+  <li>Your harddrive. For example lets say you have 10 gigs in your hard drive and every gig is a seperate
+    memory partial. If there for example there is 3 parts (3 gigs) that are free but not allocated one next to each other, and you want to install a 3 gig program, it will search for the available space in the whole 10 parts and insert the 3 gig data and create nodes to allocat all the data once it is called.</li>
+  <li>Your web browsers with the crusor next and previous are linked lists</li>
+  <li>You can create trees which will be discussed in a later date.</li>
+  <h4>Stacks</h4>
+  <li>Stacks are like trays. You place a tray on top of the stack and you can take the top one out.</li>
+  <li>With the POP command.</li>
+  <li>When you pop you take the element and output it.</li>
+    the stack to go back in time.</li>
+  <li>LIFO. Last In First Out </li>
+    Or better: Last Come First Served.<br>
+    <i>In ruby we have pop and push methods for an array.</i>
+  <h4>Queues</h4>
+  <li>Queues are like queues</li>
+  <li>FIFO. First In First Out</li>
+  <li>Or Longest one out</li>
+    <i>In ruby we have the shift method for an array</i>
+  <li> Queues and Stacks are O ( 1 )</li>
+  <h4>Real world examples of Stacks and Queues</h4>
+    Stacks
+  <li>Undo and Redo in example a word application.<br>You have one stack that is your command stack(the words
+   you type in the program) and the other will be your undo and redo stack. Lets say you have 4,5,6,7,8 as your command. To Undo you simply taek the 8 and put it in the other stack. Now you have 7 as your command. Undo, you take that 8 from the redo undo stack and place it to your command stack.</li>
+   Queue
+  <li>Scheduling.Printing. The computer queues the print jobs.</li>
+  <h3>Different sorting methods over arrays</h3>
+    Bubble Sorting
+  <li>Finds the max</li>
+  <li>You have an unsorted array and you take the first element and compare it to the next, if the first
+    element is bigger than the second element it shifts places and then compares to the next element. If the element is smaller than the next. It stays where it is and we move to the next element to compare to their next one.  </li>
+  <li>This is ineffective way to sort because worst case it will be O(n2) because you could need to touch all
+    elements twice</li>
+    <p>Here is a bubble code in ruby:</p>
+    <i>
+      array = [4, 7, 2, 3, 1] <br>
+        loop do<br>
+          swapped = false<br>
+            (array.length - 1).times do |i|<br>
+              if array[i] > array[i + 1]<br>
+                array[i], array[i + 1] = array[i + 1], array[i]<br>
+                swapped = true<br>
+              end<br>
+            end<br>
+            break unless swapped<br>
+          end<br>
+          print array<br>
+    </i>
+  <li>Best Time</li>
+    <i>Omega(n)</i>
+  <li>Average Time</li>
+    <i>O with a cross(^2)</i>
+  <li>Worst Time</li>
+    <i>)(n^2)</i>
+    Selection Sorting
+  <li>Repeatedly finds the minimum</li>
+  <li>The main difference between bubble sort and selection sort is that
+    instead of searching through the entire array each time, it creates and only searches an "unsorted portion"</li>
+  <li>There are two portions of an array. A sorted portion and an
+    unsorted portion.</li>
+  <li>Typically this is kept tracked with an index number. So for
+    example of 0-3 index is sorted, it will start with index 4.</li>
+  <li>It takes the first element of the unsorted portion and searches
+    for the smallest number of the array and then swaps it.</li>
+  <li>Best Time</li>
+    <i>Omega(n^2)</i>
+  <li>Average Time</li>
+    <i>O with a cross(n^2)</i>
+  <li>Worst Time</li>
+    <i>)(n^2)</i>
+    Insertion Sort
+  <li>Insertion is like selection in the sense that it has a sorted
+    portion and an unsorted portion.</li>
+  <li>The first number is the sorted portion. It looks on the number to
+    the right. If it is smaller it will take it and put it on the left side of the first number for it is smaller, if bigger it will leave it where it is. And go through each element one by one and sort them.
+  </li>
+  <li>Although this algorithim is smarter, it still has about the same
+    magnitude of run time.</li>
+  <li>Best Time</li>
+    <i>Omega(n)</i>
+  <li>Average Time</li>
+    <i>O cross(n^2)</i>
+  <li>Worst Time</li>
+    <i>)(n^2)</i>
+    Quick Sort
+  <li>Quick sort creates a pivot and all numbers less than the pivot go
+    to the left, and all numbers greater go to the right.
+    array</li>
+  <li>Then it reapplies this algorithim to each side</li>
+  <li>This creates an algorithim which implements a divide and conquer
+    approach to sorting.</li>
+  <li>After it had created the "tree" it will count from the left side
+    from the bottom left, then right, then go up count the left, then the right and then counts the pivot and counts the right side starting all the way in the bottom left.</li>
+  <li>Best Time</li>
+    <i>O(nlogn)</i>
+  <li>Average Time</li>
+    <i>O cross(nlogn)</i>
+  <li>Worst Time</li>
+    <i>O(n^2)</i>
+    Merge Sort
+  <li>It uses also the divide and conquer methodology used in the quick
+    sort algorithim.</li>
+  <li>It works by dividing the elements to smaller and smaller chunks until they are all seperated.</li>
+  <li>Then it recombines them using crusors comparing each on.</li>
+  <li>If for example you have 12 elements. 6 and 6 will be in 2
+    sections. The two 6's will then be seperated and recombined from smallest to biggest and after that the two 6's will compare to each other and put from smallest ot biggest</li>
+  <li>Best Time</li>
+    <i>Omega(nlogn)</i>
+  <li>Average Time</li>
+    <i>O cross(nlogn)</i>
+  <li>Worst Time</li>
+    <i>O(nlogn)</i>
+    Stable vs NonStable
+  <li>Stable means if for example you have 2 a's. The first A will
+    always be before the second A when you sort. Otherwise in some cases this can cause problems</li>
+  <li>Bubble Sort</li>
+    <i>Stable</i>
+  <li>Selection Sort</li>
+    <i>Nonstable</i>
+  <li>Insertion Sort</li>
+    <i>Stable</i>
+  <li>Quick Sort</li>
+    <i>Nonstable</i>
+  <li>Merge Sort</li>
+    <i>Stable</i>
+
+  <h3>Trees</h3>
+  <li>Trees are known as a hierarchical data structure.</li>
+  <li>Instead of pointing from one piece of data to the next, a tree has many different paths that you can take from each node. This creates a system of parents, and children.</li>
+  <li>Quick Sort, Merge sort, nodes are all trees</li>
+    Binary Search Tree
+  <li>A binary search tree has 3 rules:</li>
+    <i>Each node can only have at most 2 children.</i>
+    <i>All right children must be greater than.</i>
+    <i>All left children must be less than or equal to.</i>
+  <li>With these rules you are able to search effectively.</li>
+  <li>Search</li>
+    <i>O(log n)</i>
+  <li>Insert</li>
+    <i>O(log n)</i>
+  <li>Delete</li>
+    <i>O(log n)</i>
+    Tree Traversals
+  <li>There is bunch of different ways to traverse a tree and print it
+    out</li>
+  <li>Inorder</li>
+    <i>Left, Right, Root</i>
+  <li>Preorder</li>
+    <i>Root, Left, Right</i>
+  <li>Postorder</li>
+    <i>Left, Right,Root</i>
+    Real World Examples
+  <li>Directory</li>
+  <li>Decision Trees</li>
+    <i>Machine learning</i>
+    <i>Games ending of a story</i>
+    <i>Chess</i>
+    Graphs
+  <li>Directed Graphs</li>
+    <i>You can only go through the nodes but never going back to the previous node</i>
+  <li>Undirected Graphs</li>
+    <i>You can go through the previous node as many times as you want</i>
+  <li>Weighted Graphs</li>
+    <i>You can have a directed or undirected weighted graph and direct or undirected unweighted graph</i>
+    <i>Weighted means it can take more time or points to go to one node than the other.</i>
+
+
+
+
+
+
+
+
+
+
+</ul>

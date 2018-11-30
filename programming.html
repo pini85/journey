@@ -1,0 +1,292 @@
+<h1>Computer programming 101</h1>
+<ul>
+  <h3>Base 2 numbers</h3>
+  <li>We humans count in base 10 0-9
+  <li>Computers count in base 2.
+  <li>Computer has bits. A bit can have 2 states. Can either be 0 or a 1 cannot be 0 1 in the same time.
+  <li>A hardware is a very complex magnet. A bit is a magnetic charge. 0 is a negative charge and 1 is a
+    positive charge.
+
+    Understanding bits
+  <li>If you had a 8 bit calculator, the highest number is 255
+  <li>The range is from 0 -255</li>
+    [128][ 64][32 ][16 ][ 8 ][ 4 ][ 2 ][ 1 ] = bytes<br>
+    [ 1 ][ 1 ][ 1 ][ 1 ][ 1 ][ 1 ][ 1 ][ 1 ] = ON/OFF<br>
+
+    <h3>Signed magnitude</h3>
+  <li>Unsigned system can only generate positive numbers
+  <li>Signed system can generate negative numbers</li>
+    [SIGNED][ 64][32 ][16 ][ 8 ][ 4 ][ 2 ][ 1 ]<br>
+    [   1   ]<br>
+  <li>Is negative? = 1 which means true
+  <li>You will lose the most significant bite to a signed system. So all together will be -127 so the range
+    is now 127 - -127.
+  <li>The problem with signed system is that you can make a -0 if you turn all the bites off. And in
+    mathamtics, there is no such thing as -0.
+  <li>The 0s and 1s dont do anything. What we need is to process those 0's and 1's. Process the units to
+    generate an output.
+  <li>There are 3 different outputs in your computer
+    <i>GPU = Graphics Processing Unit = Pixels</i>
+    <i>SPU = Sound Processing Unit - Sound waves</i>
+    <i>CPU = Core Processing Unit = The brains.Logic(Math etc)</i>
+  <li>So if you had a 8bit processor. Then you can get 256(including 0) different pixels sound waves,numbers.
+
+    <h3>Sound and recording</h3>
+   <li> We have bites of 0's and 1's and we send the bits to the SPU.
+  <li>The SPU takes those bites and it produces an electrical charge, a current, that current flows to the
+    aux cable all the way to the speaker.
+  <li>The speaker recieves that current and inside the speaker we have a cone and it moves backwards and
+    fowards. It moves air particles and that is the volume of the voice. To move backwards and fowards depends on the charge.
+  <li>The cone has the ability to move backwards and fowards because the cone is wrapped with copper. And
+    next to the copper we have a magnet.
+  <li>The harder the charge, the futher the cone will go from the magnet, thus producing sound waves.
+
+    Recording:
+  <li>The process is reversed.
+    When you say something to the microphone, your vocal chords are vibrating the air and you are pushing
+    back the cone.
+  <li>There are two metal plates after the cone. The last one doesnt move, the one closer to the cone moves
+    towards the last metal plate and that produces electric charge sent down the cable to the SPU and become a base 2 number.
+  <li>The wireless microphones have a mini computer inside of them and the microphone itself is processing
+      those electric charges and produces 2 base numbers and sending that to the usb.
+
+    <h3>Firmware and BIOS</h3>
+  <li>Frimware is a physical program with positive and negative chargers.
+  <li>When you boot up your computer firmware you can start to write your programming langauge and you can
+    boot your operating system for example.
+  <li>There are many different kinds of firmware.
+  <li>BIOS = Basic Input Output System.There are many BIOS's.
+    But The main BIOS chip(that has the 0's and 1's) is the one that starts your computer before your operating system.
+
+    <h3>Volatile/ Temporary Memory & Nonvolatile/ Presistent Memory</h3>
+  <li>When ever you store bits, your store it in memory.
+  <li>Hard drive = Volatile
+  <li>Ram (Random Access Memory) = Nonvolatile
+  <li>For example when a user wants to save a file then you would need to use nonvaltile memory.
+  <li>For example a user uses a word document. Makes a word bold, that process we don't need to remember. The
+    procesessing is a short period of time. It processes it and spits it out. You dont need to save it.
+    But you need to give the user the ability to save it to the hard drive so you can get back to it.
+
+    <h3>Basic Network Structure</h3>
+  <li>Local Network = Intranet(Internal)
+  <li>Global Network = Internet(External)
+  <li>A network is tranferring bits to one another by the help of a Ethernet cable, lan(local area network).
+  <li>A router is a computer, it has a chip board, it has memory. Whenever I connect the ethernet cable to my laptop to the router it is also called a local network, like connecting two computers together.
+  <li>You can only have two types of connections. Wired or wireless.
+  <li>Wireless = Using arial technology. Arials can transmit(send) bits and recieve bits through the air
+    through positive and negative charges.
+  <li>All devices have arials.
+
+    <h3>IPV4, IPV6 and packets</h3>
+  <li>IP's were made so we can target systems to send data and recieve data. A mailing address. So computers
+    can communicate over the internet. We can target each other on a network.
+  <li>IP = Internet Protocol Addresses.<br>
+    IPV4
+  <li>4 = 4 Bytes
+  <li> An IP address can be for example: 217.30.231.249<br>
+    Each number represents a byte. They are really 32 bits all together so
+    its 21730231239 as a number.
+  <li>You get the ip address from your isp.
+    The problem is that we are working here with 32 bits so that will translate to 4 million addresses. 4 billion possible base two numbers. Every person has multiple devices. It wont be enough.
+   <li> We solve it with routers. A router comes with a nat = Network address translation. We only give the
+    router the one ip address.
+
+    <h3>Servers and HTTP</h3>
+    <li>Servers are simply computers that are connected to the internet and they serve files.
+    <li>Your router is a computer so it gets the IP address from your ISP
+    <li>The IP is a Public IP Adress.
+     <li>Behind the router you have your individual devices, each one will assign an ip address from your router(private ips) so you dont need to use different ip addresses from your isp.
+    <li>For example you send an request to google.com, you are requesting data from a server and that server
+      has the google ip address.
+    <li>When we send that request a package is made. Whenever you send binary data it is send with a packet
+      through the internet.
+    <li>Like in the mail. We are requesting some information back. Please give us the webpage what we want.
+      We write the address to google,which is actually an ip address it goes to the router. The router knows the private ip address. The router stores the private ip address and it sends that packet to the ISP and that routes it to the server where you get the 0s 1s data from google. Google  server knows where to send the data because your router has a public IP address. Google can see the ip address and creates a new packet and  it gives it back to the ISP(mailman) and the isp knows where to send it back because we have an return address which is my ip and sends it to my router and now the router remembers the private ip address who made that request. It routes it back to the device who made the initial address.
+    <li>Sometimes you disconnect your router and connect it back your ip can change. The Ip is valuable for
+      the ISP so they recycle them to other users.
+
+      IPV6
+    <li>The problem with IPV4 was that it only had 4 billion possible binary code. It would eventually not be enough</li>
+    <li>So they made it with 6 bytes. Which means 340 trillion, trillion,trillion different ip addresses.</li>
+
+    <h3>MAC addresses</h3>
+    <li>Media Access Control Address
+    <li>Ip address can change. Mac addresses are pyhsical hard coded in silicon and are 0s 1s(48 bits in
+      length) that the manufcature creates. So you cannot run nor hide!
+
+  <h3>Domain names</h3>
+  <li>Every website has an ip address and when you request a http, it goes through the isp to the server.
+  <li>The ISP doesnt know what google is but they have a domain register which has the ip address.
+  <li>So when you buy a domain name you get 2 services. A domain name and an ip address
+  <li>Every single isp in the world has that ip address so thats why when you register a domain name it takes
+    24-48 hours for all the isp in the world to update their domain registers.
+
+  <h3>HTTP</h3>
+  <li>We need a mailing system to send data and to receive data.</li>
+  <li> We need a protocol that is a standard for all the ISP's in the world</li>
+  <li>HTTP: Hyper Text Transfer Protocol</li>
+
+
+  <h3>Operating system</h3>
+  <li>Operating systems are simply complex structures of many programs.
+  <li>Each program has a spefic task and all the programs are able to communicate with each other.
+  <li>Each operating system has a protocol, an operation on how they communicate with one another. An operation system controls how these mini programs communicate with one another to make an operating system work. Each has a name for their protocol.
+  <i>Windows = DOS()</i><br>
+  <i>Mac = UNIX</i><br>
+  <i>LINUX = GNU</i><br>
+
+  <h3>API and the console</h3>
+  API = Application Programming Interface.
+  <li>Programs communicate with other programs. If they didnt, you cannot get any complex things done.
+  <li>Programs are interfacing(interacting) with other programs.
+  <li>Can ask data or send data to another program.
+  <li>They need an address which is the name.
+  Console
+  <li>Originally how do you communicate with the computer. It was with a console. A text based interface. Not a graphical interface like nowadays.
+  <li>Also in a graphical interface you cannot ask specific questions unless the developer put it there. But with a console you can ask anything.
+  There is external and internal API.
+  <li>I asked a question for example about how many fonts do we have.
+  I called the program externally. And that program will internally fetch it and gives it back to the console.
+
+  <h3>Programming languages and execution</h3>
+  <li>Programming langauges are made for us humans not computers.
+  <li>So most programming languages come with the following to translate our programming langauge to binary code which the machine understands:
+    <i>Interpreter</i><br>
+    <i>Compiler</i><br>
+
+    JIT/AOT Compiler
+    <li>A compiler transforms your human code into machine code that your hardware can understand. HEX or
+      binary code
+    <li>C, C++, C#, JAVA<br>
+    <li>They have different compilers because each one is different. Each one has a different syntax. So you
+      cannot use a compiler from C to a C++.
+    <li>Transpiler : takes a human readable language and converts it to another human readable language. So you can share the same code to these operating systems for example.
+      <i>Windows = C#</i><br>
+      <i>APPLE = C++</i><br>
+      <i>ANDROID = JAVA</i><br>
+      <i>IOS = C#</i><br>
+      <li>All the langauges have their own syntax so when you transpile you can use them with all the different langauges. It is called HAXE.
+      HAXE can tranpile it to all the other languages.<br>
+    <li>Seperate the programming langauge and the way the programming language is implemented.
+      For example javascript in the 1990's was Interpreted. In 2008 It was compiled. It is still the same langauge. Just a different way to convert it to machine code.
+      Interperter :<br>
+
+    <li>It has all the functions predefined. We tell it to start running the instructions. It runs the first
+      line/function, interpertates that and  then looks at the 2nd function and so on. This is quite slow. Because you are waiting for it to interpate for the next instruction.
+      So thats why we have compilers.<br>
+    <li>Compilers take all of the script and converts it to machine code in one go. So now the compiler can
+      read it right away. It makes very fast because there is no delay.<br>
+      But there is a problem with bugging.<br>
+    <li>When you interpertate, it runs every line one by one. So if there is a bug, it would stop and you
+      would know where it failed. But as a compiler if there was an error it would just carry on. And you dont know where the bug is because it wont stop.
+    <li>Interpreter :
+      <i>Easy debugging </i><br>
+      <i>Slower</i><br>
+    <li>Compiler:
+      <i>Faster</i><br>
+      <i>Harder debugging</i><br>
+    <li>So what we have is a combination of the both:
+      JIT- Compiler/ Just In Time<br>
+    <li>There are many different compilers but this is the main one
+    <li> JIT is the Interpreter and Compiler is the Machine code
+    <li>So you get speed and also you get debugging.
+
+      <h3>Programming,scripting and markup langauges.</h3>
+    <li>Markup langauges are not programming langauges. It is not asking logical questions to the computer.
+      <i>HTML</i><br>
+      <i>CSS</i><br>
+      <i>EPUB</i><br>
+      <i>XSL</i><br>
+    <li>These are all for presentation. How you will present the Data.
+    <li> We have scripting languages as a sub of a programming language so you can understand how that
+      language has been compiled.
+    <li>Programming Langauges : C, c#, C++, JAVA
+    <li> Scripting langauges : Javascript, Ruby, PHP, SQL etc.
+    <li>Prgramming languages can compile them to machine code. And what we can do is take that machine code
+      and distrubute it to different computers.
+    <li>There is a benefit here because we have the source code.
+    <li>These are not interperated on the clients computer.
+    <li>The downside is that they may have different hardware configurations and operating situations so they
+      cannot share the same code. You need to recompile for each operating system.
+    <li>Another downside is that your hardware can have a different architcture. It is the way your computer
+       is designed to handle those bits.<br>
+       So they cannot work in that computer. You need to recompile it to their hardware.<br>
+
+       Scripting langauges:
+    <li>Eventually they also do get compiled and run on your hardware but the way they get compiled is
+       different.
+    <li>We create the script but we dont hit compile in our computers. We distrubute the script to the
+       clients (different computers)
+    <li>The downside is that they have our source code.
+    <li> When it goes to their computer it gets interperted and executed. All computers have this option so I
+      dont need to care about their architcture or what operating system they are running at.
+      Clent Vs server side langauges
+    <li>You have to know where that langauge has been compiled or transpiled.
+    <li>If its on your computer, then its a client side langauge. If on the server side then it is a server
+      side langauge.
+    <li>You ask the server for a html page. The server will also give you all associated HTML, CSS and JS
+      files.
+    <li> We are in the client side and we received these files.
+    <li> HTML CSS are markup langauges so they are not compiled.
+    <li>However JS is compiled and it is compiled in the clients side. On our computer.
+    <li> Ruby for example is a server side langauge.
+    <li> Your server gives you outputs. So it will either output files and it will be compiled in your
+      computer or it will do the compilment on the server and gives it to you. You dont get to see the syntax because it is run on the server and produces the outcome of the syntax.
+    <li>It is important to know because for example you have passwords and the server side has them but they
+      dont send them over. That suntax is proceed and you dont get to see it.
+
+      <h3>Primitive data:</h3>
+    <li>Strings,integers,floats and booleans.
+    <li>We have programming langauges like normal langauages to communicate they also have
+      <i>NOUNS (color)</i><br>
+      <i>ADJECTIVES (blue)</i><br>
+      <i>VERBS (drive)</i><br>
+    <li>For example Objects have NOUNS ADJECTIED AND VERBS
+      Car<br>
+    <li>We need nouns to describe that car
+      <i>Nouns: Color weight</i><br>
+    <li>We need adjectives describe the nouns
+      <i>color: RED</i><br>
+      <i>weight: 30kg</i><br>
+    <li>I can also use nouns for the state of the car.
+      <i>Parked: True</i><br>
+    <li>They are all primitive data types.
+    <li> can also work with the objects.
+    <li>Thats why we have verbs. They are action
+    <li> For example
+      <i>Get in</i><br>
+      <i>Functions are the actions. We can define the action and run the function. We are performing the action.
+
+      <h3>Object hierarchy</h3>
+    <li>Sometimes you need objects to create objects. For example a car has wheels,windowsand engine. The
+      wheels, windows and engine have objects of their own. Objects can incompsulate other objects.
+    <li>When you group all these obljects together you have a Object hierarchy which is the car.
+
+      <h3>Operators</h3>
+    <li>Our alphabet are symbols A-Z.
+    <li>Also program langauge have smybols. Without operators you cannot do anything like in our langauge
+      without our symbols we cannot do anything.
+    <li>Operators is the computer langauge symbols. There are precombiled functions that the computer
+      understands. + - = == ! etc
+
+      <h3>Programming paradigm</h3>
+    <li>Paradign = A pattern, module
+    <li>We have quite a few ways to write programming langauges.
+
+      Procedural Paradigm
+    <li>Set of subroutines.
+    <li>We break our instructions down instead having line after line we call the functions on a later date
+
+      Functional Paradigm
+    <li>Functions ONLY
+    <li>In procedural programming your functions can change the state of the application, modify data structures, variables but functional programming is a little bit different. We treat the functions as if they were values. It is purely functional. We dont try to change the state of the program.
+
+      OOP
+    <li>Object oriented programming is all about manipulating and accessing objects.
+    <li>Objects attributes are the template.
+    <li>Objects are always objects. They do not need to have the <i>class</i> syntax. If they work with
+      objects, manipulates and modifies objects it is oop.
+    <li>You can have also a procedural programming langauge together with oop.
+    <li>Your free will, your creativity is in the procedural programming. You can think, interact and work
+      with those objects.
+</ul>
